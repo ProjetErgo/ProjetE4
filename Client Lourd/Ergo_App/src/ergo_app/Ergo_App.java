@@ -15,7 +15,10 @@ public class Ergo_App {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        new Frame().setVisible(true);
+        Frame Identification = new Frame();
+        Identification.setVisible(true);
+        Identification.setResizable(false);
+        
     }
     
 }

@@ -19,7 +19,6 @@ public class Frame2 extends javax.swing.JFrame {
     public Frame2() {
         initComponents();
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -65,12 +64,14 @@ public class Frame2 extends javax.swing.JFrame {
         jTextField1.setText("jTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setType(java.awt.Window.Type.POPUP);
 
         jPanel1.setBackground(new java.awt.Color(51, 153, 255));
 
         jPanel4.setBackground(new java.awt.Color(0, 0, 0));
         jPanel4.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(51, 102, 255)));
         jPanel4.setForeground(new java.awt.Color(0, 204, 0));
+        jPanel4.setAutoscrolls(true);
 
         jPanel2.setBackground(new java.awt.Color(153, 255, 102));
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 255, 102), new java.awt.Color(153, 255, 102), new java.awt.Color(153, 255, 102), new java.awt.Color(153, 255, 102)));
@@ -391,7 +392,7 @@ public class Frame2 extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    JOptionPane.showMessageDialog(this,"Eggs are not supposed to be green.","A plain message",JOptionPane.PLAIN_MESSAGE);
+    JOptionPane.showMessageDialog(this,"Merci, votre formulaire à bien été renseigné","Confirmation Formulaire",JOptionPane.PLAIN_MESSAGE);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -428,6 +429,7 @@ public class Frame2 extends javax.swing.JFrame {
             }
         });
     }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

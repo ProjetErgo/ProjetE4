@@ -209,7 +209,10 @@ public class Frame extends javax.swing.JFrame {
 
         if( jTextField1.getText().compareTo("User")==0 && String.valueOf(jPasswordField1.getPassword()).compareTo("User")==0) {
 System.out.println("ok");
-     new Frame2().setVisible(true);
+     Frame2 Formulaire =new Frame2();
+     Formulaire.setVisible(true);
+     Formulaire.setResizable(false);
+     
         }
      else{
          System.out.println("Veuillez entrez un login ou un mot de passe valide !!!");
