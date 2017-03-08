@@ -15,6 +15,7 @@ import javax.swing.JOptionPane;
  */
 public class Frame extends javax.swing.JFrame {
 
+    public int exact=0;
     /**
      * Creates new form Frame
      */
@@ -45,21 +46,21 @@ public class Frame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 100, 255));
 
-        jPanel1.setBackground(new java.awt.Color(51, 153, 255));
-        jPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(255, 204, 102)));
+        jPanel1.setBackground(new java.awt.Color(110, 138, 159));
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jPanel3.setBackground(new java.awt.Color(153, 255, 102));
-        jPanel3.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(51, 102, 255)));
+        jPanel3.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(0, 0, 0)));
         jPanel3.setForeground(new java.awt.Color(0, 204, 0));
 
-        jLabel4.setBackground(new java.awt.Color(153, 255, 102));
+        jLabel4.setBackground(new java.awt.Color(190, 245, 200));
         jLabel4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 153, 51));
+        jLabel4.setForeground(new java.awt.Color(231, 62, 1));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Identifiez Vous !");
         jLabel4.setToolTipText("");
         jLabel4.setAlignmentX(0.5F);
-        jLabel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jLabel4.setMaximumSize(new java.awt.Dimension(96, 53));
         jLabel4.setMinimumSize(new java.awt.Dimension(96, 53));
 
@@ -75,11 +76,11 @@ public class Frame extends javax.swing.JFrame {
         );
 
         jPanel4.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel4.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(51, 102, 255)));
+        jPanel4.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(0, 0, 0)));
         jPanel4.setForeground(new java.awt.Color(0, 204, 0));
 
-        jPanel2.setBackground(new java.awt.Color(153, 255, 102));
-        jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 255, 102), new java.awt.Color(153, 255, 102), new java.awt.Color(153, 255, 102), new java.awt.Color(153, 255, 102)));
+        jPanel2.setBackground(new java.awt.Color(187, 208, 211));
+        jPanel2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -181,16 +182,14 @@ public class Frame extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -208,13 +207,16 @@ public class Frame extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
         if( jTextField1.getText().compareTo("User")==0 && String.valueOf(jPasswordField1.getPassword()).compareTo("User")==0) {
-System.out.println("ok");
-     Frame2 Formulaire =new Frame2();
+            
+            this.exact=1;
+System.out.println(this.exact);
+
+    Frame2 Formulaire =new Frame2();
      Formulaire.setVisible(true);
      Formulaire.setResizable(false);
-     
         }
      else{
+            exact=0;
          System.out.println("Veuillez entrez un login ou un mot de passe valide !!!");
          JOptionPane.showMessageDialog(this,"Veuillez entrez un login ou un mot de passe valide !!!","LOGIN FAILED",JOptionPane.ERROR_MESSAGE);
              }

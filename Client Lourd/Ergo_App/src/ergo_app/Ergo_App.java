@@ -5,6 +5,8 @@
  */
 package ergo_app;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author samy
@@ -18,7 +20,8 @@ public class Ergo_App {
         Frame Identification = new Frame();
         Identification.setVisible(true);
         Identification.setResizable(false);
-        
+  
     }
     
+   
 }
