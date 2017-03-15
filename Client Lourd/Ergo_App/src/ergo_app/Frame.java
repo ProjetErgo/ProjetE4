@@ -211,11 +211,10 @@ public class Frame extends javax.swing.JFrame {
             this.exact=1;
 System.out.println(this.exact);
 
+    this.setVisible(false);
     Frame2 Formulaire =new Frame2();
      Formulaire.setVisible(true);
      Formulaire.setResizable(false);
-    Frame Identification=new Frame();
-        Identification.setVisible(false);
         }
      else{
             exact=0;
