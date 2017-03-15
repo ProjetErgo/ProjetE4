@@ -7,6 +7,11 @@ package ergo_app;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,8 +24,12 @@ public class Frame extends javax.swing.JFrame {
     /**
      * Creates new form Frame
      */
-    public Frame() {
+    public Frame() throws ClassNotFoundException, SQLException{
         initComponents();
+        String myDriver = "com.mysql.jdbc.Driver";
+	 
+        
+        Class.forName(myDriver);
     }
 
     /**
@@ -205,7 +214,24 @@ public class Frame extends javax.swing.JFrame {
 
      
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
+        Connection conn = null;
+        String url = "jdbc:mysql://localhost/ergoapp";
+        try {
+            
+	    	if(conn==null){
+			 conn = DriverManager.getConnection(url,"root","");
+                         System.out.println("Connexion BDD Ok !!");
+                         Statement stmt = conn.createStatement();
+                         ResultSet rset = stmt.executeQuery("select Utilisateurs from admin");
+                         while (rset.next())
+                                 System.out.println (rset.getString (1));
+                         
+}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Connexion BDD echouée");
+			e.printStackTrace();
+		} 
         if( jTextField1.getText().compareTo("User")==0 && String.valueOf(jPasswordField1.getPassword()).compareTo("User")==0) {
             
             this.exact=1;

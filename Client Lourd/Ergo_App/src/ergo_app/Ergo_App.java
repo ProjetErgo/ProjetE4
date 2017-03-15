@@ -7,7 +7,9 @@ package ergo_app;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,25 +21,10 @@ public class Ergo_App {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws ClassNotFoundException {
+    public static void main(String[] args) throws ClassNotFoundException, SQLException {
         
         
-        String myDriver = "com.mysql.jdbc.Driver";
-	//String url = "jdbc:mysql://localhost/ergoapp?autoReconnect=true&useSSL=false"; 
-	String url = "jdbc:mysql://localhost/ergoapp"; 
-        Connection conn = null;
-        Class.forName(myDriver);
-        try {
-	    	if(conn==null){
-			 conn = DriverManager.getConnection(url,"root","");
-                         System.out.println("Connexion BDD Ok !!");
-}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			System.out.println("Connexion BDD echouée");
-			e.printStackTrace();
-		} 
-            
+     
         Frame Identification = new Frame();
         Identification.setVisible(true);
         Identification.setResizable(false);
