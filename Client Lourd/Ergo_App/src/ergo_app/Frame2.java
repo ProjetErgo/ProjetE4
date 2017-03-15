@@ -426,3 +426,20 @@ public class Frame2 extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
+static Connection conn ;
+	public static void connexionBD()
+	{
+		String myDriver = "com.mysql.jdbc.Driver";
+	    String url = "jdbc:mysql://localhost/ergoapp?autoReconnect=true&useSSL=false"; 
+	    try {
+	    	if(conn==null){
+			 conn = DriverManager.getConnection(url,"root","");
+                         System.out.println("Connexion BDD Ok !!");
+}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Connexion BDD echouée");
+			e.printStackTrace();
+		} 
+
+	}
