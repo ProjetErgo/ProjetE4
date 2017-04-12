@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <meta charset="utf-8" http-equiv="content-type">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <title>Epreuve E6 Antoine Grosmann</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootsrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/boostrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/boostrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body id="body">
+    <table id="en-tete">
+      <tbody>
+        <tr>
+          <td><a href="epreuve%20E6.html"><img style="width: 108px; height: 55px;"
+                src="img/accueil.gif"> </a><br>
+          </td>
+         <td> <a href="Competence.html">Compétences</a> </td>
+          <td> <a href="projet.html">PPE</a> </td>
+          <td> <a href="projetstage.html">Stages</a> </td>
+          <td> <a href="veilletechno.html">Veille technologique</a> </td>
+          <td style="background-image: url();"><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <center>
+      <h2>Epreuve E6</h2>
+      <h3>Antoine Grosmann</h3>
+      <h4>BTS SIO Option SLAM</h4>
+    </center>
+    <center>
+      <table>
+        <tbody>
+          <tr>
+            <td><a href="index/jeudedame/index.html"><img src="img/damier.jpg"></a></td>
+     			<td> <a href="projet%20cinema.html"><img src="img/cinema.jpg"> </a></td>
+            <td><a href="projetevil.html"><img src="img/menu.jpeg"></a></td>
+          </tr>
+          <tr>
+            <td> <img src="img/"> </td>
+            <td> <img src="img/"> </td>
+            <td> <img src="img/"> </td>
+          </tr>
+        </tbody>
+      </table>
+    </center>
+    
+  </body>
+</html>

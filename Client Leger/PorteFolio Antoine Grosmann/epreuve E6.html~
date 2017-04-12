@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <meta charset="utf-8" http-equiv="content-type">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <title>Epreuve E6 Antoine Grosman</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootsrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/boostrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/boostrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body id="body">
+  <div style="height:20%;text-align:center;background-color:#000000"><img src="img/BAN.bmp"></div>
+    <table id="en-tete">
+      <tbody>
+        <tr>
+          <td><a href="epreuve%20E6.html"><img style="width: 108px; height: 55px;"
+                src="img/accueil.gif"> </a><br>
+          </td>
+          <td> <a href="Competence.html">Compétences</a> </td>
+          <td> <a href="projet.html">PPE</a> </td>
+          <td> <a href="stages.html">Stages</a> </td>
+          <td> <a href="veilletechno.html">Veille technologique</a> </td>
+          <td style="background-image: url();"><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <center>
+      <h2>Epreuve E6</h2>
+      <h3>Antoine Grosmann</h3>
+      <h4>BTS SIO Option SLAM</h4>
+    </center>
+    <p style="margin-left:20%;margin-right:20%">Ce site est le portfolio de mon
+      épreuve de BTS Services Informatique aux Organisations, E6. Il s’agit d’un
+      porte document sous forme de site internet, regroupant mes diverses
+      projets, mon expérience professionnel ainsi que mon projet de carrière, le
+      tout lié à ma spécialisation professionnel. <br>
+      <br>
+      Sur ce site vous pouvez consulter : </p>
+    <div style="margin-left:20%;margin-right:30%">
+      <ul class="list-group">
+        <li class="list-group-item"><a href="Competence.html">1/ COMPETENCES</a></li>
+        <li class="list-group-item"><a href="img/cvE6.pdf"
+            style="margin-left:2%;"> CV</a> </li>
+        <li class="list-group-item"><a href="img/tab1.png"
+            style="margin-left:2%;"> Tableau de synthese E6</a> </li>
+      </ul>
+      <ul class="list-group">
+        <li class="list-group-item"><a href="projet.html">2/PPE</a> </li>
+        <li class="list-group-item"><a href="projet%20cinema.html" style="margin-left:2%;">
+            Projet Cinémathèque</a> </li>
+        <li class="list-group-item"><a href="projetevil.html" style="margin-left:2%;">
+            Application mobile Evil Run</a> </li>
+        <li class="list-group-item"><a href="index/jeudedame/index.html" style="margin-left:2%;">
+            Site sur le jeu de dame</a> </li>
+        <li class="list-group-item"><a style="margin-left:2%;"> …</a> </li>
+      </ul>
+      <ul class="list-group">
+      	<li class="list-group-item"><a href="stages.html">3/STAGES</a> </li>
+      	<li class="list-group-item"><a href="stage1.html"style="margin-left:2%;"> Stage 1ère année</a> </li>
+      	<li class="list-group-item"><a style="margin-left:2%;"> Stage 2ème année</a> </li>
+      </ul>
+      <ul class="list-group">
+        <li class="list-group-item"><a href="veilletechno.html">4/VEILLE
+            TECHNOLOGIQUE</a> </li>
+        <li class="list-group-item"> <a href="veilletechno.html" style="margin-left:2%;"> Veille sur la réalité virtuelle</a></li>
+      </ul>
+    </div>
+    
+  </body>
+</html>

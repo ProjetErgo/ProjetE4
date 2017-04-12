@@ -1,0 +1,105 @@
+<<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <style type="text/css">
+  #body{
+    background-image: url("img/fond.png");
+    }
+  #taille {
+    font-size: 200%;
+   margin-top: 50px;
+  }
+  .navbar {
+    height: 150px;
+  }
+  #marge { 
+    margin-top: 90px;
+   }
+  </style>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <title>Le Jeu de dame</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/bootsrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/boostrap-theme.css">
+  <link rel="stylesheet" type="text/css" href="css/boostrap-theme.min.css">
+  <script src="js/bootstrap.min.js"></script>
+</head>
+<body id="body">
+<font color="#ffffff">
+<!--Navigation-->
+ <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=#topbar id="smallb">
+          <span class="sr-only">Jeu de dame</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a id="taille" class="navbar-brand" href="jeudedame.html">Menu</a>
+      </div>
+      <div class="collapse navbar-collapse" id="topbar">
+      <ul class="nav navbar-nav">
+        <li id="taille"><a data-toggle="dropdown" class="dropdown-toggle" href="regle.html">Les règles</a><ul class="dropdown-menu"><li><a href="regle.html#top">Le matériel</a></li><li><a href="regle.html#marche">La marche des pièces</a></li><li><a href="regle.html#prise">La prise</a></li><li><a href="regle.html#iregu">Les irrégularités</a></li><li><a href="regle.html#result">Le résultat</a></li></ul></li>
+        <li id="taille"><a href="Damier web.html">Le jeu</a></li>
+        <li id="taille"><a data-toggle="dropdown" class="dropdown-toggle" href="video.html">Vidéo</a><ul class="dropdown-menu"><li><a href="video.html#top">Les bases</a></li><li><a href="video.html#strat">Les stratégies plus complexe</a></li><li><a href="video.html#monde">Le championnat du monde</a></li></ul></li>
+        <li id="taille"><a href="ladder.html">Classement</a></li>
+      </ul> 
+      </div>
+    </div>
+  </nav>
+
+      </div>
+    </div>
+  </nav>
+
+  <!--regle-->
+  <div id="marge"></div>
+  <br id="top"></br>
+<h2 id="materiel">Le matériel</h2> 
+        <p>
+            <ul>
+              <li>Le jeu de dames international se joue sur un damier carré divisé en <strong>100 cases</strong> égales, alternativement claires et foncées.</li>
+              <li>Le jeu se joue sur les cases foncées du damier. Il y a donc 50 cases actives. La plus longue diagonale, joignant deux coins du damier et comprenant 10 cases foncées, se dénomme la grande diagonale.</li>
+              <li><strong>Le damier doit être placé de sorte que la première case de gauche, pour chaque joueur, soit une case foncée.</strong></li>
+              <li>Le jeu de dames international se joue avec 20 pions blancs (clairs) et 20 pions noirs (foncés). Avant de débuter une partie, les 20 pions noirs et les 20 pions blancs sont disposés sur les 4 premières rangées de chaque joueur.</li>
+            </ul>
+            <p>&nbsp;<img src="img/dame.jpeg" alt="Un damier" title="Position initiale"><figcaption id="marche">Position initiale</figcaption></p>
+        </p>
+<h2 id="marche">La marche des pièces</h2>
+  <p>
+    <ul>
+      <li>Il existe deux types de pièces : les pions et les dames.</li> 
+      <li>Le premier coup est toujours joué par les blancs. Les adversaires jouent un coup chacun à tour de rôle avec leurs pièces.</li>
+      <li>Un pion se déplace obligatoirement vers l’avant, en diagonale, d’une case sur une case libre de la rangée suivante.</li>
+    </ul> 
+  <p>&nbsp;<img src="img/dameex1.jpeg" alt="exemple 1">&nbsp; Voici deux exemple &nbsp;<img src="img/dameex2.jpeg" alt="exemple 2">&nbsp;</p> 
+  </p>
+  <p>
+    <ul>
+      &nbsp;<li>Lorsqu'il atteint la dernière rangée, le pion devient dame. Pour cela, on couronne le pion en plaçant dessus un deuxième pion de la même couleur.</li>
+    </ul>
+  </p>
+<h2 id="prise">La prise</h2>
+  <p>
+    <ul>
+      <li><strong>La prise des pièces adverse est obligatoire et s’effectue aussi bien en avant qu’en arrière.</strong></li>
+      <li>Lorsqu’un pion se trouve en présence, diagonalement, d’une pièce adverse derrière laquelle se trouve une case libre, il doit obligatoirement sauter par-dessus cette pièce et occuper la case libre. Cette pièce adverse est alors enlevée du damier. Cette opération complète est la prise par un pion.</li>
+    </ul>
+  <p>&nbsp;<img src="img/prise.jpg" alt="">&nbsp; Un pion effectue une prise en passant au-dessus d'un pion adverse.<br ></br> &nbsp;<p align="right">
+Il se rend alors sur la case suivante et enlève le pion adverse. &nbsp; <img src="img/prise1.jpg" >&nbsp;</p></p>
+  </p>
+  <p>
+    <ul>
+      <li>Lorsqu’une dame se trouve en présence sur la même diagonale, directement ou à distance, d’une pièce adverse derrière laquelle se trouvent une ou plusieurs cases libres, elle doit obligatoirement passer par-dessus cette pièce et occuper, au choix, une des cases libres. Cette pièce est alors enlevée du damier. Cette opération complète est la prise par une dame.</li>
+    </ul>
+  </p>
+     <h2 id="iregu">Les irrégularités</h2>
+      <p>A finir remplissage</p>
+     <h2 id="result">Le résultat</h2>
+      <p>A finir remplissage</p>
+</font>
+
+     <p><a href="jeudedame.html" >&nbsp&nbspMenu principal</a>&nbsp&nbsp&nbsp<a href="#top">Haut de page</a></p>
+     <div style="height: 20px"></div>
+</body>
