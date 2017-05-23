@@ -166,7 +166,6 @@
                                       <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -468,18 +467,18 @@
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="13">
                 <StringItem index="0" value="MM"/>
-                <StringItem index="1" value="Janvier"/>
-                <StringItem index="2" value="F&#xe9;vrier"/>
-                <StringItem index="3" value="Mars"/>
-                <StringItem index="4" value="Avril"/>
-                <StringItem index="5" value="Mai"/>
-                <StringItem index="6" value="Juin"/>
-                <StringItem index="7" value="Juillet"/>
-                <StringItem index="8" value="Aout"/>
-                <StringItem index="9" value="Septembre"/>
-                <StringItem index="10" value="Octobre"/>
-                <StringItem index="11" value="Novembre"/>
-                <StringItem index="12" value="D&#xe9;cembre"/>
+                <StringItem index="1" value="01"/>
+                <StringItem index="2" value="02"/>
+                <StringItem index="3" value="03"/>
+                <StringItem index="4" value="04"/>
+                <StringItem index="5" value="05"/>
+                <StringItem index="6" value="06"/>
+                <StringItem index="7" value="07"/>
+                <StringItem index="8" value="08"/>
+                <StringItem index="9" value="09"/>
+                <StringItem index="10" value="10"/>
+                <StringItem index="11" value="11"/>
+                <StringItem index="12" value="12"/>
               </StringArray>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">

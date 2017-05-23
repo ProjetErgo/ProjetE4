@@ -224,31 +224,27 @@ public class Frame extends javax.swing.JFrame {
 			 conn = DriverManager.getConnection(url,"root","");
                          System.out.println("Connexion BDD Ok !!");
                          Statement stmt = conn.createStatement();
-                         ResultSet rset = stmt.executeQuery("select Utilisateurs from admin");
-                         while (rset.next())
-                                 System.out.println (rset.getString (1));
-                         
-}
+                         String Mdp = new String (jPasswordField1.getPassword());
+                         ResultSet rset = stmt.executeQuery("select Id from Admin WHERE Utilisateurs = '"+jTextField1.getText()+"' AND Mdp = '"+Mdp+"'");
+                         if (rset.next()){
+                                    this.setVisible(false);
+                                    Frame2 Formulaire =new Frame2();
+                                    Formulaire.setVisible(true);
+                                    Formulaire.setResizable(false);
+                                    }
+                         else{
+                                    System.out.println("Veuillez entrez un login ou un mot de passe valide !!!");
+                                    JOptionPane.showMessageDialog(this,"Veuillez entrez un login ou un mot de passe valide !!!","LOGIN FAILED",JOptionPane.ERROR_MESSAGE);
+                                    }
+                }
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			System.out.println("Connexion BDD echouée");
 			e.printStackTrace();
-		} 
-        if( jTextField1.getText().compareTo("User")==0 && String.valueOf(jPasswordField1.getPassword()).compareTo("User")==0) {
-            
-            this.exact=1;
-System.out.println(this.exact);
-
-    this.setVisible(false);
-    Frame2 Formulaire =new Frame2();
-     Formulaire.setVisible(true);
-     Formulaire.setResizable(false);
-        }
-     else{
-            exact=0;
-         System.out.println("Veuillez entrez un login ou un mot de passe valide !!!");
-         JOptionPane.showMessageDialog(this,"Veuillez entrez un login ou un mot de passe valide !!!","LOGIN FAILED",JOptionPane.ERROR_MESSAGE);
-             }
+		} catch (ClassNotFoundException ex) { 
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+        
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

@@ -5,6 +5,15 @@
  */
 package ergo_app;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -16,8 +25,10 @@ public class Frame2 extends javax.swing.JFrame {
     /**
      * Creates new form Frame2
      */
-    public Frame2() {
+    public Frame2() throws ClassNotFoundException, SQLException{
         initComponents();
+        String myDriver = "com.mysql.jdbc.Driver";
+        Class.forName(myDriver);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -126,7 +137,7 @@ public class Frame2 extends javax.swing.JFrame {
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AAAA", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970", "1969", "1968", "1967", "1966", "1965", "1964", "1963", "1962", "1961", "1960", "1959", "1958", "1957", "1956", "1955", "1954", "1953", "1952", "1951", "1950", "1949", "1948", "1947", "1945", "1944", "1943", "1942", "1941", "1940", "1939", "1938", "1937", "1936", "1935", "1934", "1933", "1932", "1931", "1930", "1929", "1928", "1927", "1926", "1925", "1924", "1925", "1926", "1927", "1926", "1925", "1924", "1923", "1922", "1921", "1920", "1919", "1918", "1917", "1916", "1915", "1914", "1913", "1912", "1911", "1910", "1909" }));
         jComboBox3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MM", "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre" }));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MM", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
         jComboBox4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jComboBox4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -183,7 +194,6 @@ public class Frame2 extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 153, 51));
         jButton1.setText("Soumettre");
-        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -272,8 +282,7 @@ public class Frame2 extends javax.swing.JFrame {
                                 .addGap(6, 6, 6)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel1))
-                                .addGap(7, 7, 7)))
+                                    .addComponent(jLabel1))))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -324,6 +333,21 @@ public class Frame2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Connection conn = null;
+        String url = "jdbc:mysql://localhost/ergoapp";
+        try {
+            
+	    	if(conn==null){
+			 conn = DriverManager.getConnection(url,"root","");
+                         System.out.println("Connexion BDD Ok !!");
+                         Statement statut = conn.createStatement();
+                         int rset = statut.executeUpdate("INSERT INTO `ergoapp`.`clients` ( `Nom`, `Prenom`, `Sexe`, `DateNaissance`, `Portable`, `email`, `adresse`, `ville`, `CP`, `Commentaires`) VALUES ( '"+jTextField3.getText()+"', '"+jTextField4.getText()+"', '"+jComboBox1.getSelectedItem()+"', '"+jComboBox3.getSelectedItem()+"-"+jComboBox4.getSelectedItem()+"-"+jComboBox5.getSelectedItem()+"', '"+jTextField5.getText()+"', '"+jTextField9.getText()+"', '"+jTextField6.getText()+"', '"+jTextField7.getText()+"', '"+jTextField8.getText()+"', '"+jTextArea1.getText()+"');");
+                }
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Connexion BDD echouée");
+			e.printStackTrace();
+		}
         JOptionPane.showMessageDialog(this,"Merci, votre formulaire à bien été renseigné","Confirmation Formulaire",JOptionPane.PLAIN_MESSAGE);
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -389,7 +413,13 @@ public class Frame2 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Frame2().setVisible(true);
+                try {
+                    new Frame().setVisible(true);
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (SQLException ex) {
+                    Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
