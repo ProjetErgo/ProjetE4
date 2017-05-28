@@ -25,7 +25,14 @@ public class Frame2 extends javax.swing.JFrame {
     /**
      * Creates new form Frame2
      */
-    public Frame2() throws ClassNotFoundException, SQLException{
+    private int id;
+    public int getId()
+      {
+        return id;
+      }
+    
+    public Frame2(int id) throws ClassNotFoundException, SQLException{
+        this.id = id;
         initComponents();
         String myDriver = "com.mysql.jdbc.Driver";
         Class.forName(myDriver);
@@ -341,9 +348,10 @@ public class Frame2 extends javax.swing.JFrame {
 			 conn = DriverManager.getConnection(url,"root","");
                          System.out.println("Connexion BDD Ok !!");
                          Statement statut = conn.createStatement();
-                         int rset = statut.executeUpdate("INSERT INTO `ergoapp`.`clients` ( `Nom`, `Prenom`, `Sexe`, `DateNaissance`, `Portable`, `email`, `adresse`, `ville`, `CP`, `Commentaires`) VALUES ( '"+jTextField3.getText()+"', '"+jTextField4.getText()+"', '"+jComboBox1.getSelectedItem()+"', '"+jComboBox3.getSelectedItem()+"-"+jComboBox4.getSelectedItem()+"-"+jComboBox5.getSelectedItem()+"', '"+jTextField5.getText()+"', '"+jTextField9.getText()+"', '"+jTextField6.getText()+"', '"+jTextField7.getText()+"', '"+jTextField8.getText()+"', '"+jTextArea1.getText()+"');");
-                }
-		} catch (SQLException e) {
+                         int resultat = statut.executeUpdate("INSERT INTO `ergoapp`.`clients` ( `Nom`, `Prenom`, `Sexe`, `DateNaissance`, `Portable`, `email`, `adresse`, `ville`, `CP`, `Commentaires`, `Id Admin`) VALUES ( '"+jTextField3.getText()+"', '"+jTextField4.getText()+"', '"+jComboBox1.getSelectedItem()+"', '"+jComboBox3.getSelectedItem()+"-"+jComboBox4.getSelectedItem()+"-"+jComboBox5.getSelectedItem()+"', '"+jTextField5.getText()+"', '"+jTextField9.getText()+"', '"+jTextField6.getText()+"', '"+jTextField7.getText()+"', '"+jTextField8.getText()+"', '"+jTextArea1.getText()+"', "+getId()+");");
+                                }            
+            }
+        catch (SQLException e) {
 			// TODO Auto-generated catch block
 			System.out.println("Connexion BDD echouée");
 			e.printStackTrace();

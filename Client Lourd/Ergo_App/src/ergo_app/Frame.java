@@ -21,8 +21,8 @@ import javax.swing.JOptionPane;
  * @author samy
  */
 public class Frame extends javax.swing.JFrame {
-
     public int exact=0;
+   
     /**
      * Creates new form Frame
      */
@@ -227,8 +227,10 @@ public class Frame extends javax.swing.JFrame {
                          String Mdp = new String (jPasswordField1.getPassword());
                          ResultSet rset = stmt.executeQuery("select Id from Admin WHERE Utilisateurs = '"+jTextField1.getText()+"' AND Mdp = '"+Mdp+"'");
                          if (rset.next()){
+                                    System.out.println(rset.getString(1));
+                                    int id = rset.getInt(1);
                                     this.setVisible(false);
-                                    Frame2 Formulaire =new Frame2();
+                                    Frame2 Formulaire =new Frame2(id);
                                     Formulaire.setVisible(true);
                                     Formulaire.setResizable(false);
                                     }
@@ -282,6 +284,7 @@ public class Frame extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
