@@ -10,6 +10,7 @@
           <td> <a href="financement.html">Financement</a> </td>
           <td> <a href="tarif.html">Tarifs</a> </td>
 		  <td> <a href="contact.html">Contact</a> </td>
+		  <td> <a href="professionnels.html">Professionnels</a></td>
           <td style="background-image: url();"><br>
           </td>
         </tr>
