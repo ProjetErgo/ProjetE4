@@ -29,6 +29,10 @@
           	width: 90%;
             height: 90%;
           	}
+      img#img1
+      {
+      width: 124px; height: 123px; margin-left: 319px;
+      }
      	td,tr:hover
      			{
      			background-image: url("img/bleu.png");
