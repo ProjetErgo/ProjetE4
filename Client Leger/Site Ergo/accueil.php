@@ -14,14 +14,14 @@
     <table id="en-tete">
       <tbody>
         <tr>
-          <td><a href="accueil.html"><img style="width: 108px; height: 55px;" src="img/accueil.gif"> </a><br>
+          <td><a href="accueil.php"><img style="width: 108px; height: 55px;" src="img/accueil.gif"> </a><br>
           </td>
-          <td><h3 class="p3"> <a href="ergo.html">L'ergothérapie</a> </h3> </td>
-          <td><h3 class="p3"><a href="consultation.html">Motif de consultation</a> </h3> </td>
-          <td><h3 class="p3"> <a href="financement.html">Financement</a> </h3> </td>
-          <td><h3 class="p3"><a href="tarif.html">Tarifs</a> </h1> </h3>
-          <td><h3 class="p3"><a href="contact.html">Contact</a> </h3> </td>
-		  <td><h3 class="p3"><a href="professionnels.html">Professionnels</a> </h3></td>
+          <td> <a href="ergo.php">L'ergothérapie</a> </td>
+          <td> <a href="consultation.php">Motif de consultation</a> </td>
+          <td> <a href="financement.php">Financement</a> </td>
+          <td> <a href="tarif.php">Tarifs</a> </td>
+		  <td> <a href="contact.php">Contact</a> </td>
+		  <td> <a href="professionnels.php">Professionnels</a> </td>
           <td style="background-image: url();"><br>
           </td>
         </tr>
