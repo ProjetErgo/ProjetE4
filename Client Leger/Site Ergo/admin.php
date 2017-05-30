@@ -1,3 +1,15 @@
+<?php
+$pseudo = $_Post['pseudo'];
+$password = $_Post['password'];
+
+echo $pseudo;
+echo $password;
+
+if(($pseudo !="root")||($password != "root")){
+	//header("Location: professionnels.php");
+}
+
+?>
 <html>
   <head>
     <meta charset="utf-8" http-equiv="content-type">
