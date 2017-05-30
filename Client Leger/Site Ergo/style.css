@@ -15,7 +15,13 @@
             width: 15%;
             height: 10%;
       		text-align:center;
+			border: 1px solid black;
             }
+	  affichage
+			{
+				border: thin solid #6495ed;
+				width: 50%;
+			}
       h1.p2{
           font-family: Cantarell;
           font-size: 24px;
