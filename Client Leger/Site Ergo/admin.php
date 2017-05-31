@@ -1,14 +1,17 @@
 <?php
-$pseudo = $_Post['pseudo'];
-$password = $_Post['password'];
 
-echo $pseudo;
-echo $password;
+$pseudo = (isset($_POST['pseudo']))?$_POST['pseudo']:'';
+$password =(isset($_POST['password']))?$_POST['password']:'';
 
-if(($pseudo !="root")||($password != "root")){
-	//header("Location: professionnels.php");
+ 
+$db = new PDO('mysql:host=localhost;dbname=ergoapp;charset=utf8mb4', 'root', '');
+$identi = $db->query("SELECT count(id)as nbr FROM admin WHERE Utilisateurs = '$pseudo' AND Mdp = '$password'");
+
+$row = $identi->fetch(PDO::FETCH_ASSOC);
+
+if($row['nbr'] != '1'){
+	header("Location: professionnels.php");
 }
-
 ?>
 <html>
   <head>
@@ -40,10 +43,30 @@ if(($pseudo !="root")||($password != "root")){
       </tbody>
     </table>
 	<?php
-// on se connecte à notre base
-$link = mysqli_connect("localhost", "root", "", "ergoapp");
+$data = $db->query("SELECT * FROM clients");
 
-if (isset($_POST['Nom'])) {
+$list = $data->fetchAll(PDO::FETCH_ASSOC);
+
+
+echo "<table style=\"  border: medium solid #000000; margin: auto;\">";
+foreach($list as $row){
+	echo "<tr style=\"border: medium solid #000000;\">";
+		echo "<td>";	echo $row['Nom'];	echo "</td>";
+		echo "<td>";	echo $row['Prenom'];	echo "</td>";	
+		echo "<td>";	echo $row['Sexe'];	echo "</td>";
+		echo "<td>";	echo $row['DateNaissance'];	echo "</td>";
+		echo "<td>";	echo $row['Portable'];	echo "</td>";
+		echo "<td>";	echo $row['email'];	echo "</td>";
+		echo "<td>";	echo $row['adresse'];	echo "</td>";
+		echo "<td>";	echo $row['ville'];	echo "</td>";
+		echo "<td>";	echo $row['CP'];	echo "</td>";
+		echo "<td>";	echo $row['Commentaires'];	echo "</td>";
+		echo "<td>";	echo $row['Id Admin'];	echo "</td>";
+	echo "</tr>";
+}
+echo "</table>";
+
+/*if (isset($_POST['Nom'])) {
 
 	// lancement de la requête
 	$sql = 'SELECT * FROM client WHERE nom = "'.$_POST['Nom'].'"';
@@ -63,7 +86,7 @@ if (isset($_POST['Nom'])) {
 }
 else {
 	echo 'La variable Nom n\'est pas déclarée';
-}
+}*/
 ?>
 </body>
 </html>
