@@ -1,8 +1,8 @@
-.<html>
+ï»¿<html>
   <head>
     <meta charset="utf-8" http-equiv="content-type">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <title>L'ergothérapie</title>
+    <title>L'ergothÃ©rapie</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/bootsrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/boostrap-theme.css">
@@ -16,7 +16,7 @@
         <tr>
           <td><a href="accueil.php"><img style="width: 108px; height: 55px;" src="img/accueil.gif"> </a><br>
           </td>
-          <td> <a href="ergo.php">L'ergothérapie</a> </td>
+          <td> <a href="ergo.php">L'ergothÃ©rapie</a> </td>
           <td> <a href="consultation.php">Motif de consultation</a> </td>
           <td> <a href="financement.php">Financement</a> </td>
           <td> <a href="tarif.php">Tarifs</a> </td>
