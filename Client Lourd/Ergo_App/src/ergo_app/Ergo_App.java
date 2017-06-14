@@ -25,7 +25,7 @@ public class Ergo_App {
         
         
      
-        Frame Identification = new Frame();
+        Connexion Identification = new Connexion();
         Identification.setVisible(true);
         Identification.setResizable(false);
   

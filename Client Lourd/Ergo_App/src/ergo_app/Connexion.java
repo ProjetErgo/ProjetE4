@@ -20,13 +20,13 @@ import javax.swing.JOptionPane;
  *
  * @author samy
  */
-public class Frame extends javax.swing.JFrame {
+public class Connexion extends javax.swing.JFrame {
     public int exact=0;
    
     /**
      * Creates new form Frame
      */
-    public Frame() throws ClassNotFoundException, SQLException{
+    public Connexion() throws ClassNotFoundException, SQLException{
         initComponents();
         String myDriver = "com.mysql.jdbc.Driver";
 	 
@@ -230,7 +230,7 @@ public class Frame extends javax.swing.JFrame {
                                     System.out.println(rset.getString(1));
                                     int id = rset.getInt(1);
                                     this.setVisible(false);
-                                    Frame2 Formulaire =new Frame2(id);
+                                    Menu Formulaire =new Menu(id);
                                     Formulaire.setVisible(true);
                                     Formulaire.setResizable(false);
                                     }
@@ -244,7 +244,7 @@ public class Frame extends javax.swing.JFrame {
 			System.out.println("Connexion BDD echouée");
 			e.printStackTrace();
 		} catch (ClassNotFoundException ex) { 
-            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Connexion.class.getName()).log(Level.SEVERE, null, ex);
         } 
         
         
@@ -273,14 +273,15 @@ public class Frame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Connexion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Connexion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Connexion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Connexion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
@@ -288,11 +289,11 @@ public class Frame extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    new Frame().setVisible(true);
+                    new Connexion().setVisible(true);
                 } catch (ClassNotFoundException ex) {
-                    Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(Connexion.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (SQLException ex) {
-                    Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(Connexion.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         });
